@@ -1,6 +1,6 @@
 cask "photo-selector" do
-  version "1.3.0"
-  sha256 "c1a7bb8d865043c0cb3eca97a62205cc2fa9b818ef5390efa7eadbf418012cf6"
+  version "1.4.0"
+  sha256 "361e5816dca4a6805fa10cf6ea557c096b1963ee3053663c1f3203bc0aa8f177"
 
   url "https://github.com/vgupta98/photo-selector/releases/download/v#{version}/PhotoSelector-#{version}.dmg"
   name "Photo Selector"
