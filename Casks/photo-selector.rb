@@ -2,8 +2,8 @@ cask "photo-selector" do
   version "1.4.0"
   sha256 "361e5816dca4a6805fa10cf6ea557c096b1963ee3053663c1f3203bc0aa8f177"
 
-  url "https://github.com/vgupta98/photo-selector/releases/download/v#{version}/PhotoSelector-#{version}.dmg"
-  name "Photo Selector"
+  url "https://github.com/vgupta98/photo-selector/releases/download/v#{version}/Rhenium-#{version}.dmg"
+  name "Rhenium"
   desc "Browse, favourite and export photos from a local folder"
   homepage "https://github.com/vgupta98/photo-selector"
 
@@ -12,9 +12,9 @@ cask "photo-selector" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
-  app "PhotoSelector.app"
+  app "Rhenium.app"
 
   zap trash: "~/Library/Caches/PhotoSelector"
 
@@ -23,7 +23,7 @@ cask "photo-selector" do
     launch macOS Gatekeeper will block it. After installing, clear the quarantine
     flag once:
 
-      xattr -dr com.apple.quarantine "/Applications/PhotoSelector.app"
+      xattr -dr com.apple.quarantine "/Applications/Rhenium.app"
 
     or right-click the app in Finder and choose Open.
   EOS
