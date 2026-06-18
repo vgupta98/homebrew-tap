@@ -1,4 +1,4 @@
-cask "photo-selector" do
+cask "rhenium" do
   version "1.5.1"
   sha256 "f1c204ddb118591de04bf3da941f9c7b874288e9df1189d0397a9abb0b5003b8"
 
@@ -16,7 +16,7 @@ cask "photo-selector" do
 
   app "Rhenium.app"
 
-  zap trash: "~/Library/Caches/PhotoSelector"
+  zap trash: "~/Library/Caches/Rhenium"
 
   caveats <<~EOS
     #{token} is not signed with an Apple Developer ID or notarized, so on first
