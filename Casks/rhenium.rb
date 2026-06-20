@@ -1,6 +1,6 @@
 cask "rhenium" do
-  version "1.5.1"
-  sha256 "f1c204ddb118591de04bf3da941f9c7b874288e9df1189d0397a9abb0b5003b8"
+  version "1.6.0"
+  sha256 "e5cea6df337ca0da3fb52f8e2ea28841790d2376ccef56bb99331857ac51b7d4"
 
   url "https://github.com/vgupta98/photo-selector/releases/download/v#{version}/Rhenium-#{version}.dmg"
   name "Rhenium"
