@@ -1,7 +1,7 @@
 {
-  "latest": "1.7.0",
-  "dmgUrl": "https://github.com/vgupta98/rhenium/releases/download/v1.7.0/Rhenium-1.7.0.dmg",
-  "notesUrl": "https://github.com/vgupta98/rhenium/releases/tag/v1.7.0",
+  "latest": "1.8.0",
+  "dmgUrl": "https://github.com/vgupta98/rhenium/releases/download/v1.8.0/Rhenium-1.8.0.dmg",
+  "notesUrl": "https://github.com/vgupta98/rhenium/releases/tag/v1.8.0",
   "rollout": 1.0,
   "mandatory": false
 }
