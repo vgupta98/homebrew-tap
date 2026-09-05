@@ -11,10 +11,10 @@ class QuietNotetaker < Formula
     strategy :github_latest
   end
 
+  depends_on "ffmpeg"
   # ScreenCaptureKit's microphone capture and the per-process Core Audio calls
   # both need a recent macOS. The Swift targets build for 15.0.
   depends_on macos: :sequoia
-  depends_on "ffmpeg"
   depends_on "whisper-cpp"
 
   def install
@@ -59,9 +59,11 @@ class QuietNotetaker < Formula
     # event format, none of which need a microphone or a meeting.
     assert_match "all checks passed", shell_output("#{libexec}/build/watcher --self-test")
 
-    # doctor exits non-zero here, because the models and the Claude CLI are
-    # absent in a sandbox. What matters is that it reports rather than crashes.
-    output = shell_output("#{bin}/qn doctor 2>&1", 1)
+    # doctor's exit code says whether this machine is set up, which depends on
+    # the sandbox and is not what this tests. What matters is that it runs its
+    # checks and names them, rather than crashing.
+    output = shell_output("#{bin}/qn doctor 2>&1 || true")
     assert_match "speech model", output
+    assert_match "screen recording", output
   end
 end
