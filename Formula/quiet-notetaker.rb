@@ -1,8 +1,8 @@
 class QuietNotetaker < Formula
   desc "Record, transcribe and write up your meetings, all on your own Mac"
   homepage "https://github.com/vgupta98/quiet-notetaker"
-  url "https://github.com/vgupta98/quiet-notetaker/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "70ee6d74a8f72ceecb89b8bfa1bbec233fe48ece6db774c6e7774085882926bf"
+  url "https://github.com/vgupta98/quiet-notetaker/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "829c61e1aad5ca064753cd4a47810d98a8a685dd9ada0d693156026f10d9a0f1"
   license "MIT"
   head "https://github.com/vgupta98/quiet-notetaker.git", branch: "main"
 
