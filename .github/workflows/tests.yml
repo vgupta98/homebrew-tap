@@ -1,0 +1,36 @@
+name: tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  FORMULA: vgupta98/tap/quiet-notetaker
+
+jobs:
+  formula:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15, macos-26]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Put this checkout where brew looks for the tap
+        run: |
+          mkdir -p "$(brew --repository)/Library/Taps/vgupta98"
+          ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/vgupta98/homebrew-tap"
+
+      - run: brew style "$FORMULA"
+
+      - run: brew audit --strict --online "$FORMULA"
+
+      - run: brew install --build-from-source "$FORMULA"
+
+      - run: brew test "$FORMULA"
